@@ -1,14 +1,13 @@
-// Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
 template<typename T, int size>
 class TPQueue {
-  private:
-    T arr[size];
+ private:
+    T arr[100];
     int first;
     int last;
-  public:
+ public:
     void push(T obj) {
       int i = last;
       for (; (i >= first) && arr[i % size].prior < obj.prior; --i) {
