@@ -11,7 +11,7 @@ class TPQueue {
  public:
     void push(T temp) {
       int i = last++;
-      while ((--i >= start) && (arr[i % size].prior < temp.prior)) {
+      while ((--i >= firts) && (arr[i % size].prior < temp.prior)) {
         arr[(i + 1) % size] = arr[i % size];
       }
       arr[(i + 1) % size] = temp;
