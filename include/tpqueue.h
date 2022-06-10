@@ -9,6 +9,7 @@ class TPQueue {
     int first;
     int last;
  public:
+ TPQueue() :first(0), last(0) { }
     void push(T temp) {
       int i = last++;
       while ((--i >= first) && (arr[i % size].prior < temp.prior)) {
