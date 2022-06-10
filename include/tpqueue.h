@@ -9,8 +9,8 @@ class TPQueue {
     int first;
     int last;
  public:
-    void push(T obj) {
-      int i = stop++;
+    void push(T temp) {
+      int i = last++;
       while ((--i >= start) && (arr[i % size].prior < temp.prior)) {
         arr[(i + 1) % size] = arr[i % size];
       }
